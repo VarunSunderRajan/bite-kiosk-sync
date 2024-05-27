@@ -9,6 +9,7 @@ This project is a simple server that syncs menu data from a third-party POS API 
 - [Endpoints](#endpoints)
 - [Logging](#logging)
 - [Technologies Used](#technologies-used)
+- [Testing](#Testing)
 - [Author](#author)
 
 ## Installation
@@ -42,6 +43,7 @@ This project is a simple server that syncs menu data from a third-party POS API 
 - `index.js`: The entry point of the server, sets up the Express app and defines the `/trigger-sync` endpoint.
 - `logger.js`: Configures the Winston logger for logging messages.
 - `sync.js`: Contains the logic for syncing the menu data from the third-party POS API.
+- `tests/`: Contains unit and integration tests.
 - `package.json`: Lists the project dependencies and scripts.
 - `README.md`: Provides an overview of the project, installation steps, usage, and other relevant information.
 - `database.sqlite`: The SQLite database file.
@@ -63,6 +65,18 @@ The server uses Winston for logging. Logs are output to both the console and a f
 - SQLite
 - Axios
 - Winston
+
+## Testing
+
+1. Run the tests:
+    ```bash
+    npm test
+    ```
+
+The tests cover the following aspects:
+- Database model definitions
+- Syncing menu data from the third-party POS API
+- API endpoint for triggering the sync
 
 ## Author
 
